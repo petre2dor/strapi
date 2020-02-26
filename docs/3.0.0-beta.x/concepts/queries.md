@@ -374,11 +374,7 @@ Documentation: [https://mongoosejs.com/](https://mongoosejs.com/)
 **Example**
 
 ```js
-const result = strapi.query('restaurant').model.find({
-  date: { $gte: '2019-01-01T00.00.00Z' },
-});
-
-const fields = result.toObject();
+const result = await strapi.connections.default.model('Restaturant').find({});
 ```
 
 :::
